@@ -1,0 +1,93 @@
+---
+const problems = [
+  {
+    num: "01",
+    title: "Falta de clareza",
+    desc: "Dificuldade para definir prioridades e próximos passos estratégicos no negócio."
+  },
+  {
+    num: "02",
+    title: "Processos ineficientes",
+    desc: "Tempo e recursos valiosos desperdiçados em tarefas que poderiam ser otimizadas."
+  },
+  {
+    num: "03",
+    title: "Decisões sem dados",
+    desc: "Escolhas importantes baseadas mais em percepções empíricas do que em indicadores."
+  },
+  {
+    num: "04",
+    title: "Crescimento desorganizado",
+    desc: "A empresa expande em volume, mas a operação não acompanha o ritmo."
+  }
+];
+---
+<section class="section-problem">
+  <div class="container">
+    <div class="problem-header reveal">
+      <span class="section-tag">01 / O DESAFIO</span>
+      <h2 class="section-title">Sua empresa está crescendo ou apenas ficando mais ocupada?</h2>
+      <p class="section-subtitle">
+        Muitas empresas enfrentam os mesmos desafios: processos desorganizados, decisões baseadas em improviso e dificuldade para transformar esforço em resultado real.
+      </p>
+    </div>
+
+    <div class="problem-grid">
+      {problems.map((p) => (
+        <div class="problem-card reveal">
+          <span class="card-num">{p.num}</span>
+          <h3 class="card-title">{p.title}</h3>
+          <p class="card-desc">{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-problem {
+    padding: 7rem 0;
+    background-color: var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .problem-header {
+    margin-bottom: 4rem;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .problem-card {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .card-num {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-green-dark);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-black);
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+  }
+</style>

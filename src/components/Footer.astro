@@ -1,0 +1,118 @@
+---
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-title">NEXORA</span>
+          <span class="logo-sub">CONSULTORIA</span>
+        </a>
+        <p class="brand-desc">Estratégia para transformar potencial em resultado.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-col">
+          <span class="col-title">Navegação</span>
+          <a href="#hero">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#solucoes">Soluções</a>
+        </div>
+        <div class="link-col">
+          <span class="col-title">Institucional</span>
+          <a href="#processo">Processo</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="link-col">
+          <span class="col-title">Redes</span>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Consultoria. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #050506;
+    color: var(--color-gray-medium);
+    padding: 5rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.875rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+  }
+
+  .logo-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+  }
+
+  .logo-sub {
+    font-size: 0.5rem;
+    letter-spacing: 0.35em;
+    color: var(--color-green-light);
+  }
+
+  .brand-desc {
+    max-width: 280px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .link-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .col-title {
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .link-col a {
+    transition: color 0.2s;
+  }
+
+  .link-col a:hover {
+    color: var(--color-white);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-links { grid-template-columns: 1fr 1fr; }
+  }
+</style>

@@ -1,0 +1,177 @@
+---
+---
+<section id="contato" class="section-contact">
+  <div class="container">
+    <!-- CTA Intermediário -->
+    <div class="cta-banner reveal">
+      <p class="cta-subtitle">Talvez o próximo passo da sua empresa não seja trabalhar mais.</p>
+      <h2 class="cta-title">Seja trabalhar melhor.</h2>
+      <a href="https://wa.me/5500000000000?text=Olá,%20quero%20conversar%20com%20um%20especialista." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Quero conversar com um especialista →
+      </a>
+    </div>
+
+    <!-- Bloco Principal de Contato -->
+    <div class="contact-main">
+      <div class="contact-info reveal">
+        <span class="section-tag light">VAMOS CONVERSAR</span>
+        <h2 class="contact-title">Sua próxima decisão estratégica pode começar aqui.</h2>
+        <p class="contact-desc">
+          Agende uma conversa inicial e descubra quais oportunidades podem estar escondidas no seu negócio.
+        </p>
+
+        <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-primary btn-lg">
+          Agendar diagnóstico gratuito →
+        </a>
+
+        <div class="contact-channels">
+          <a href="https://wa.me/5500000000000" class="channel-link">WhatsApp: (00) 00000-0000</a>
+          <a href="mailto:contato@nexora.com.br" class="channel-link">E-mail: contato@nexora.com.br</a>
+          <a href="#" class="channel-link">LinkedIn: /company/nexora-consultoria</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper reveal">
+        <form class="contact-form" onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" placeholder="Seu nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail corporativo</label>
+            <input type="email" id="email" placeholder="seu@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" placeholder="Nome da sua empresa" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-contact {
+    padding: 6rem 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .cta-banner {
+    background: var(--color-green-dark);
+    padding: 4rem 2rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-green-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    margin-bottom: 2rem;
+  }
+
+  .contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .contact-desc {
+    color: var(--color-gray-medium);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-lg {
+    padding: 1.25rem 2.25rem;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+  }
+
+  .channel-link {
+    color: var(--color-gray-medium);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .channel-link:hover {
+    color: var(--color-white);
+  }
+
+  /* Form */
+  .contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
+    border-radius: 4px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    color: var(--color-gray-medium);
+  }
+
+  .form-group input, .form-group textarea {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    font-family: inherit;
+  }
+
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: var(--color-green-light);
+    outline: none;
+  }
+
+  .w-full { width: 100%; }
+
+  @media (max-width: 900px) {
+    .contact-main { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,115 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Diagnóstico",
+    desc: "Entendemos o momento atual, desafios e objetivos da empresa."
+  },
+  {
+    num: "02",
+    title: "Estratégia",
+    desc: "Analisamos oportunidades e definimos as prioridades."
+  },
+  {
+    num: "03",
+    title: "Plano de ação",
+    desc: "Transformamos a estratégia em ações práticas."
+  },
+  {
+    num: "04",
+    title: "Acompanhamento",
+    desc: "Monitoramos a evolução e ajustamos a estratégia quando necessário."
+  }
+];
+---
+<section id="processo" class="section-process">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="section-tag">05 / MÉTODO</span>
+      <h2 class="section-title">Do desafio ao resultado.</h2>
+    </div>
+
+    <div class="process-timeline">
+      {steps.map((step) => (
+        <div class="step-card reveal">
+          <div class="step-head">
+            <span class="step-number">{step.num}</span>
+            <div class="step-line"></div>
+          </div>
+          <h3 class="step-title">{step.title}</h3>
+          <p class="step-desc">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-process {
+    padding: 7rem 0;
+    background-color: var(--color-white);
+  }
+
+  .process-header {
+    margin-bottom: 4rem;
+  }
+
+  .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .step-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-number {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    background: var(--color-gray-light);
+    color: var(--color-green-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-line {
+    height: 2px;
+    background: var(--color-gray-border);
+    width: 100%;
+  }
+
+  .step-card:last-child .step-line {
+    display: none;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  @media (max-width: 900px) {
+    .process-timeline {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .step-line {
+      display: none;
+    }
+  }
+</style>

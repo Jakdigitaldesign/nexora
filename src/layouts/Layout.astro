@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Nexora Consultoria | Estratégia para Crescimento Empresarial",
+  description = "Consultoria estratégica para empresas que desejam melhorar processos, tomar decisões mais inteligentes e crescer de forma estruturada."
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://nexoraconsultoria.com.br");
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ConsultingService",
+  "name": "Nexora Consultoria",
+  "url": canonicalURL.href,
+  "logo": `${canonicalURL.origin}/favicon.svg`,
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR"
+  },
+  "areaServed": "BR",
+  "serviceType": "Consultoria Empresarial e Estratégica"
+};
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- SEO Primary -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${canonicalURL.origin}/og-image.jpg`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${canonicalURL.origin}/og-image.jpg`} />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Reveal Animation Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+---
+---
+<section id="hero" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        ESTRATÉGIA • GESTÃO • CRESCIMENTO
+      </div>
+      <h1 class="hero-title">
+        Transformamos desafios empresariais em oportunidades de <span class="text-highlight">crescimento.</span>
+      </h1>
+      <p class="hero-text">
+        Ajudamos empresas a tomar decisões mais inteligentes, organizar processos e construir estratégias capazes de gerar resultados sustentáveis.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20um%20diagnóstico%20gratuito." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Agendar diagnóstico gratuito
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sobre" class="btn btn-secondary">Conhecer nossa abordagem</a>
+      </div>
+      <p class="hero-microcopy">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-green-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Diagnóstico inicial sem compromisso
+      </p>
+    </div>
+
+    <!-- Composição Visual com Foto + Elemento Flutuante -->
+    <div class="hero-visual reveal">
+      <div class="hero-image-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1654874033702-4bd41ae70619?q=80&w=687&auto=format&?auto=format&fit=crop&w=1000&q=80" 
+          alt="Consultora estratégica executiva em ambiente corporativo"
+          loading="eager"
+          width="600"
+          height="700"
+          class="hero-img"
+        />
+        <!-- Overlay sutil de gradiente para integração com a paleta escura -->
+        <div class="hero-img-overlay"></div>
+        
+        <!-- Widget Flutuante de Indicador (Composição Minimalista) -->
+        <div class="hero-stat-card">
+          <div class="stat-header">
+            <span class="stat-badge">METODOLOGIA EXCLUSIVA</span>
+          </div>
+          <div class="stat-body">
+            <span class="stat-number">+38.4%</span>
+            <span class="stat-label">Ganho de eficiência operacional</span>
+          </div>
+          <div class="stat-progress">
+            <div class="stat-progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 6rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--color-green-light);
+    border: 1px solid rgba(183, 215, 194, 0.2);
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-green-light);
+    border-radius: 50%;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+
+  .text-highlight {
+    color: var(--color-green-light);
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-text {
+    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+    color: var(--color-gray-medium);
+    margin-bottom: 2.5rem;
+    max-width: 580px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-microcopy {
+    font-size: 0.85rem;
+    color: var(--color-gray-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Composição da Imagem */
+  .hero-image-wrapper {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%) contrast(105%);
+  }
+
+  .hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 11, 13, 0) 40%, rgba(11, 11, 13, 0.75) 100%);
+    pointer-events: none;
+  }
+
+  /* Card Flutuante de Estatística sobre a Foto */
+  .hero-stat-card {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(11, 11, 13, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .stat-badge {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--color-green-light);
+    background: rgba(183, 215, 194, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-body {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--color-gray-medium);
+  }
+
+  .stat-progress {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .stat-progress-bar {
+    width: 78%;
+    height: 100%;
+    background: var(--color-green-light);
+  }
+
+  @media (max-width: 992px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>
